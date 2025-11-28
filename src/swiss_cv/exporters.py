@@ -170,14 +170,11 @@ def export_pdf_from_template(
         except Exception as e:
             logging.exception("pdfkit/wkhtmltopdf failed: %s", e)
 
-    # Fallback: save HTML file and return that path
-    html_fallback = out_path.with_suffix(".html")
-    html_fallback.write_text(html_string, encoding="utf-8")
-    logging.warning(
-        "PDF generation not available. Saved HTML fallback to %s. Install WeasyPrint or wkhtmltopdf to enable PDFs.",
-        html_fallback,
+    # No HTML fallback - raise error instead
+    raise RuntimeError(
+        "PDF generation not available. Install WeasyPrint or wkhtmltopdf to enable PDFs. "
+        f"Attempted to generate: {out_path}"
     )
-    return html_fallback
 
 
 # ----- Public functions expected by CLI -----
