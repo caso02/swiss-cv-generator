@@ -2,6 +2,9 @@
 
 A comprehensive system for generating realistic, demographically authentic Swiss CVs with structured data from official sources and web scraping.
 
+> **Data Science project at ZHAW School of Management and Law (autumn semester 2025), graded 6.0.**
+> Team project with [@gsparty](https://github.com/gsparty). My main contributions: the CV generation pipeline (demographic sampling, timeline validation, quality tiers), PDF export with four templates, integrating the berufsberatung.ch scraper, restructuring the repository and the GitHub Codespaces setup.
+
 ## Overview
 
 The Swiss CV Generator produces high-quality curriculum vitae documents based on real Swiss demographic distributions, occupational data, and industry standards. The system combines data from the Swiss Federal Statistical Office (BFS) and scraped occupational information from berufsberatung.ch to create authentic CV profiles.
